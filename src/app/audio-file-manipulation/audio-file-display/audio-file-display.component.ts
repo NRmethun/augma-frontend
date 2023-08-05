@@ -26,7 +26,7 @@ export class AudioFileDisplayComponent {
     public uiQuery: UIQuery,
   ) {}
   ngOnInit() {
-    this.uiQuery.files$.subscribe((response) => {
+    this.uiQuery.audioFiles$.subscribe((response) => {
       console.log('subs ----------  ')
       this.images = response;
       console.log('response from anywhere ',this.images);
@@ -48,6 +48,7 @@ export class AudioFileDisplayComponent {
       this.http
         .get(`${this.images[i].url}`, { responseType: 'blob' })
         .subscribe((res) => {
+          console.log(this.images[i].url)
           const reader = new FileReader();
           reader.onloadend = () => {
             const base64data = reader.result as string;

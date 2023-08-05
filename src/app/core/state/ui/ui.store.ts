@@ -7,6 +7,7 @@ export interface UIState {
   isFileUploaded:boolean;
   uploadedImage:Blob|string;
   files:AugmentedFileModel[];
+  audioFiles:AugmentedFileModel[];
 }
 
 export function createInitialUIState(): UIState {
@@ -14,7 +15,8 @@ export function createInitialUIState(): UIState {
     isLoaderVisible: false,
     isFileUploaded:false,
     uploadedImage:'',
-    files:[]
+    files:[],
+    audioFiles:[]
   };
 }
 

@@ -114,7 +114,7 @@ export class AudioFileAugmentTypeComponent {
           console.log("printing base responses ",baseResponse)
           if (baseResponse) {
             console.log("getting all responses  ", baseResponse)
-            this.uiStore.update({ files: baseResponse });
+            this.uiStore.update({ audioFiles: baseResponse });
           }
           console.log('ki likhbo ' + baseResponse);
         },

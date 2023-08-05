@@ -43,9 +43,9 @@ export class FileDisplayComponent {
   downloadFiles() {
     const zip = new JSZip();
     for (let i = 0; i < this.images.length; i++) {
-      console.log('slkdfsdf', `assets/images/${this.images[i].url}`);
+      console.log('slkdfsdf', `${this.images[i].url}`);
       this.http
-        .get(`assets/images/${this.images[i].url}`, { responseType: 'blob' })
+        .get(`${this.images[i].url}`, { responseType: 'blob' })
         .subscribe((res) => {
           const reader = new FileReader();
           reader.onloadend = () => {

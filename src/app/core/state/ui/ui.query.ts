@@ -13,6 +13,7 @@ export class UIQuery extends Query<UIState> {
 
   uploadedImage$=this.select(state=>state.uploadedImage);
   files$=this.select(state=>state.files)
+  audioFiles$=this.select(state=>state.audioFiles)
   constructor(private uiStore: UIStore) { 
     super(uiStore);
   }
