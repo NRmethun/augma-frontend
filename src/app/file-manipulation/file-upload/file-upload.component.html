@@ -1,0 +1,24 @@
+<p-card  class="upload-card">
+    <div >
+      <input
+      id="file-upload"
+      type="file"
+      accept="image/*"
+      (change)="onFileChanged($event)"
+    />
+    <label for="file-upload" >
+       <i class="pi pi-plus"></i> +
+    </label>
+  
+    </div>
+  
+    <div *ngIf="this.imgSrc">
+      <p-image
+        [src]="this.imgSrc"
+        alt="Image"
+        width="100"
+        height="100"
+        [preview]="true"
+      ></p-image>
+    </div>
+  </p-card>  

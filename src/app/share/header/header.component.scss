@@ -1,0 +1,46 @@
+// ::ng-deep  .p-menubar{
+//     background-color: royalblue
+// }
+
+
+p-menubar {
+    position: fixed;
+    top: 0;
+    height: 30px;
+    width: 100%;
+    background-color: black;
+    padding-top: 15px;
+    // padding-left: 15px;
+    color: white;
+    // z-index: 10000000000;
+  }
+
+  ::ng-deep .p-menubar .p-element {
+    margin-left: 10px;
+  }
+
+  ::ng-deep .p-menuitem-text{
+    color: white;
+  }
+
+//   .p-menubar .p-element  ul li .p-menuitem-link .p-menuitem-text{
+//     color:red ;
+//     padding-top: 3%;
+//     padding-left: 3%;
+//   }
+
+ li {
+    color: blue ;
+}
+
+
+
+//  .p-menuitem-link .p-menuitem-text{
+//     color: red;
+//     margin-left: 10px;
+// }
+// .p-menubar ul{
+//     color: red;
+// }
+
+//   p-menubar p-component

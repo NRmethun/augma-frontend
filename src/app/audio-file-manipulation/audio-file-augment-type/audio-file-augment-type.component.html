@@ -1,0 +1,25 @@
+<p-card class="type-card">
+    <p-scrollPanel class="augment-type" [style]="{width: '100%', height: '70vh'}">
+  
+      <div class="f-w-700">
+        <div class="p-10-0 ">
+          <div *ngFor="let item of augmentationDisplayList" class="field-checkbox justify-content-between">
+            <!-- <p-checkbox  class="slider" name="group1" [value]="item" label="{{item.name}}" 
+            [(ngModel)] = "selectedTypes" 
+            [inputId]="item.id" (onChange)="onValueChange(item)"></p-checkbox>
+         
+            :<label class="span-gap" [for]="item.id">{{ item.value }}</label> <br> -->
+
+            <span class="span-gap"> {{item.name}} {{' '}}: {{item.comment}}</span>
+            <br>
+            <!-- <input type="text" class="type-input-text"pInputText [(ngModel)]="item.value" /> -->
+            <input type="text" class="type-input-text"pInputText [(ngModel)]="item.value" />
+              
+          </div>
+        </div>
+      </div>
+      <button class="basic-upload-btn" (click) = "onBasicUpload()" > upload</button>
+   
+    </p-scrollPanel>
+  
+  </p-card>
